@@ -1,0 +1,19 @@
+<html>
+	<body>	
+		<div>
+			Your android version is <span id="android"></span>
+		</div>
+		<script>
+			var userAgent = navigator.userAgent
+			var pattern = /Linux; Android ([\d\.]+)/
+			var matches = userAgent.match(pattern)
+
+			var versionBox = document.getElementById("android")
+
+			if (matches != null && matches.length > 0)
+				versionBox.innerHTML = matches[1]
+			else 
+				versionBox.innerHTML = "unknown"
+		</script>
+	</body>
+</html>
